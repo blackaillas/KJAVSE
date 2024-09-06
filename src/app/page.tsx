@@ -1,7 +1,7 @@
 "use client";
 import Box from "./box";
 import Weather from "./weather";
-import Image from "next/image";
+import Events from "./events";
 import { useState } from "react";
 
 export default function Home() {
@@ -54,41 +54,7 @@ export default function Home() {
 
       <Weather />
 
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm flex flex-col">
-        <div id="events" className="w-full my-10">
-          <h1 className="text-4xl font-bold mb-4 text-blue-950">Állandó eseményeink</h1>
-
-          <div className="flex my-10 flex-col md:flex-row">
-            <div className="hidden w-1/3 md:inline-block">
-              <Image src="/sail_race.jpg" width={400} height={400} alt="sailrace" />
-            </div>
-            <div className="flex-col md:w-2/3 md:ps-24">
-              <h2 className="text-2xl text-blue-950 font-bold">Pacal kupa</h2>
-              <hr />
-              <p className="text-gray-500 my-2 flex text-lg">
-                <Image src="/calendar.svg" width={24} height={24} className="mr-3" alt="calendar" />
-                Aug 26
-              </p>
-              <p className="text-lg">A Pacal kupa minden évben megrendezésre kerül, ahol a legjobb pacalosok mérhetik össze tudásukat.</p>
-            </div>
-          </div>
-
-          <div className="flex my-10 flex-col md:flex-row">
-            <div className="hidden w-1/3 md:inline-block">              
-              <Image src="/sail_race2.jpg" width={400} height={400} alt="sailrace2" />
-            </div>
-            <div className="flex-col md:w-2/3 md:ps-24">
-              <h2 className="text-2xl text-blue-950 font-bold">Pünkösdi regatta</h2>
-              <hr />
-              <p className="text-gray-500 my-2 flex text-lg">
-              <Image src="/calendar.svg" width={24} height={24} className="mr-3" alt="calendar" />
-                Május 18
-              </p>
-              <p className="text-lg">A háromnapos vitorlás találkozó a Kékszalag után a második legnagyobb balatoni túraverseny, Balatonföldvárról Keszthelyig vitorlázik el a mezőny. </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Events />
     </main>
   );
 }

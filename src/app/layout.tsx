@@ -22,9 +22,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="hu">
+      <head>
+        <title>KJAVSE</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Keszthelyi József Attila Vitorlás Sportegyesület" />
+        <meta name="author" content="Rajkai Zoltán" />
+        <meta name="keywords" content="vitorlás, sport, egyesület, Keszthely" />
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#fff" />
+        <meta name="msapplication-TileColor" content="#fff" />
+      </head>
       <body className={roboto.className}>
         <Header />
         {children}
+        <SpeedInsights />
         <Footer />
       </body>
     </html>

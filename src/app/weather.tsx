@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 import { fetchWeatherApi } from 'openmeteo';
 import React from 'react';
 import { useEffect, useState } from 'react';
@@ -101,7 +102,14 @@ const Weather = React.memo(function Weather(props) {
                             <div key={index} className="flex flex-col items-center">
                                 <span className="font-semibold text-lg">{months[(time.getUTCMonth())] + "-" + time.getUTCDate()}</span>
                                 <span className="font-semibold text-lg"></span>
-                                <img src='/weather_sun.svg' className='w-10 h-10 m-3 opacity-60'></img>
+
+                                <Image
+                                    src={`/weather_sun.svg`}
+                                    width={40}
+                                    height={40}
+                                    alt="sunny"
+                                    className='w-10 h-10 m-3 opacity-60'
+                                />
                                 <span className="font-semibold mt-1 text-sm">{weatherData.daily.temperature2mMax[index].toFixed(0)}°C</span>
                                 <span className="text-xs font-semibold text-gray-400">{weatherData.daily.temperature2mMin[index].toFixed(0)}°C</span>
 
